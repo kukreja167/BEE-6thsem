@@ -7,17 +7,15 @@ jobs:
     runs-on: ubuntu-latest
       
     steps:
-      - name: Print message 
-        run: echo "Hello, Github Actions!"
-      - name: my name
-        run: echo "Hello, Kavya!"
-      - name: your name
-        run: echo "Hello, Sargun!"
+      - name: checkout code
+        uses: actions/checkout@v4
   say-welcome:
     needs: say-hello
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
       - name: print message
         run: echo "Welcome kavya"
         
